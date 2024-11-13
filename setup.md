@@ -16,6 +16,7 @@ Use of currently installed software:
 __Global__ npm install (npm install -g name):  
 - nest 10.4.7 (@nestjs/cli)  
 - prettier 3.3.3 (prettier)  
+- knex 3.1.0 (knex)  
 - node (@types/node)  
 
 __Nest__ npm __package.json__ install:  
@@ -43,3 +44,6 @@ Now repeat the step in terminal to ensure login with the same password and exit 
 ## Nest
 
 Create new nest project in parent projects folder using `nest new nest-backend` after `cd ./../` and use its contents along with `react-frontend` to assemble the nested react project. This will install all `node_modules` automatically. Enter `cd ./nest-backend/` and save in zip for later if you wish using `zip -r node_modules.zip node_modules`, the method is useful for both `vendor` folder and node.  
+
+To install react use `npx create-react-app react-frontend` in the parent projects folder and enter openssh password if prompted.  
+Another way is to startup with webpack and babel. Get back to the parent projects folder and type `mkdir react-frontend-webpack` and `cd react-frontend-webpack/`. Continue the installation with `npm init -y` then `npm install react react-dom` and `npm install webpack webpack-cli webpack-dev-server babel-loader @babel/core @babel/preset-env @babel/preset-react html-webpack-plugin --save-dev` finally `npm install style-loader css-loader --save-dev`. This method requires configuration of webpack and babel files, creation of first react components and html template including any npm scripts.  
