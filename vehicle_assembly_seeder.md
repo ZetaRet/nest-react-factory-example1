@@ -49,7 +49,7 @@ dashboard panel package, DASH-PP-3 - 1
 dashboard panel wires, DASH-P-WIRE-3 - 1  
 dashboard computer, DASH-COM-3 - 1  
 dashboard camera, DASH-CAM-3 - 1  
-dashboard panel electronics,  - 1  
+dashboard panel electronics, DASH-PEL-3  - 1  
 main computer ports, MCP-3 - 1  
 central computer software, CCS-XZ-765 - 1  
 central console, CC-XZ-3 - 1  
