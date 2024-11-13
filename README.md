@@ -1,3 +1,7 @@
+## Setup
+
+Read the `setup.md` and choose the steps missing on your computer to finalize the install.  
+
 ## Use
 
 __Technology__ Set:  
