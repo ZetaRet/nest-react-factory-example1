@@ -18,7 +18,7 @@ front doors left/right, FD-XZ-765 - 1
 back doors left/right, BD-XZ-765 - 1  
 front door handles left/right, FDH-BLACK-3 - 1  
 back door handles left/right, BDH-BLACK-3 - 1  
-rearview mirrors left/right, RVM-XZ-3 -1
+rearview mirrors left/right, RVM-XZ-3 - 1  
 front automatic windows left/right, FAW-XZ-REFLECT - 1  
 back black windows left/right, BBW-XZ-BLACK - 1  
 engine hood, EH-XZ-765 - 1  
