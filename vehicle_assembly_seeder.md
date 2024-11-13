@@ -62,10 +62,10 @@ floor wires, F-WIRE-3 - 1
 door wires, D-WIRE-3 - 4  
 trunk wires, T-WIRE-3 - 1  
 interior wiring, INT-WIRE-3 - 1  
-inner front door panel left,  - 1  
-inner front door panel right,  - 1  
-inner backdoors panels left/right,  - 1  
-front-end wiring and inner framework,  - 1  
+inner front door panel left, IN-FDPL-XZ-765 - 1  
+inner front door panel right, IN-FDPR-XZ-765  - 1  
+inner backdoors panels left/right,  IN-BDP-XZ-765  - 1  
+front-end wiring and inner framework, FE-WIRE-INF-XZ-765 - 1  
 under the hood parts, UHP-XZ-765 - 1  
 automatic transmission, AUTO-T-XZ-765 - 1  
 console and dashboard connectors, CD-C-3 - 1  
