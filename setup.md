@@ -22,14 +22,24 @@ __Global__ npm install (npm install -g name):
 __Nest__ npm __package.json__ install:  
 - @types/node  
 - @types/express  
-- nest  
-- nest-knexjs  
-- knex  
-- pg  
-- mysql2  
-- zod  
-- react  
-- react-router  
+- nest 10.4.7  
+- nest-knexjs 0.0.24  
+- @nestjs/config 3.3.0  
+- @nestjs/serve-static 4.0.2  
+- knex 3.1.0  
+- pg 8.13.1  
+- mysql2 3.11.4  
+- zod 3.23.8  
+
+__React__ npm __package.json install:  
+- react 18.3.1  
+- react-dom 18.3.1  
+- react-router 6.28.0  
+- @babel/core 7.26.0  
+- @babel/preset-react 7.25.9  
+- babel-loader 9.2.1  
+- webpack 5.96.1  
+- webpack-cli 5.1.4  
 
 In addition to the above you might decide to use PostgreSQL and pgAdmin instead of mysql:  
 - postgresql server 14.13  
@@ -41,9 +51,12 @@ Lookup `/etc/postgresql/VERSION/main/pg_hba.conf` as a root and change the table
 Type in terminal after `sudo su` the following lines `psql -U postgres -W  -h localhost` to login locally and check `systemctl enable/start/stop/status servicename` for system services first. This will login without password in the pgsql terminal then type your new password, i.e. `postgres` as the username in the line for password reset, revert previous `pg_hba.conf` and restart the postgresql service.  
 Now repeat the step in terminal to ensure login with the same password and exit with `\q` and save new server in pgAdmin4 with the changed password.  
 
-## Nest
+## Nest and React
 
 Create new nest project in parent projects folder using `nest new nest-backend` after `cd ./../` and use its contents along with `react-frontend` to assemble the nested react project. This will install all `node_modules` automatically. Enter `cd ./nest-backend/` and save in zip for later if you wish using `zip -r node_modules.zip node_modules`, the method is useful for both `vendor` folder and node.  
 
 To install react use `npx create-react-app react-frontend` in the parent projects folder and enter openssh password if prompted.  
 Another way is to startup with webpack and babel. Get back to the parent projects folder and type `mkdir react-frontend-webpack` and `cd react-frontend-webpack/`. Continue the installation with `npm init -y` then `npm install react react-dom` and `npm install webpack webpack-cli webpack-dev-server babel-loader @babel/core @babel/preset-env @babel/preset-react html-webpack-plugin --save-dev` finally `npm install style-loader css-loader --save-dev`. This method requires configuration of webpack and babel files, creation of first react components and html template including any npm scripts.  
+Shorter `npm install webpack webpack-cli babel-loader @babel/core @babel/preset-react --save-dev` as folder `react-frontend-webpack-short` with smaller configuration.  
+
+On this level, 4 base folders exist in the projects and can be used to version and generate new ones in the future. Building the example requires `public_html` on top, `nest-backend` and `react-frontend` using separate package.json and node_modules. This method will allow any additional application programming and different frontend along react, also can come up with react on top that compiles as the main package.json and using directly the public folder. Since `react 18` render method of the app requires `createRoot` function of `react-dom/client` also encapsulate the code in `window.bodyOnLoad` and add `onload` attribute to the html template body tag by loading the main `dist/bundle.js` in the head. Webpack must add scripts for watch/production/development to the package, define the module rules, configure the output of the entry point, resolve build path in `public_html/dist` and use production mode at the end.  
