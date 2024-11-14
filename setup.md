@@ -31,7 +31,7 @@ __Nest__ npm __package.json__ install:
 - mysql2 3.11.4  
 - zod 3.23.8  
 
-__React__ npm __package.json install:  
+__React__ npm __package.json__ install:  
 - react 18.3.1  
 - react-dom 18.3.1  
 - react-router 6.28.0  
@@ -41,7 +41,7 @@ __React__ npm __package.json install:
 - webpack 5.96.1  
 - webpack-cli 5.1.4  
 
-In addition to the above you might decide to use PostgreSQL and pgAdmin instead of mysql:  
+In addition to the above you might decide to use __PostgreSQL__ and pgAdmin instead of mysql:  
 - postgresql server 14.13  
 - pgAdmin 4 version 8.12  
 
@@ -60,3 +60,5 @@ Another way is to startup with webpack and babel. Get back to the parent project
 Shorter `npm install webpack webpack-cli babel-loader @babel/core @babel/preset-react --save-dev` as folder `react-frontend-webpack-short` with smaller configuration.  
 
 On this level, 4 base folders exist in the projects and can be used to version and generate new ones in the future. Building the example requires `public_html` on top, `nest-backend` and `react-frontend` using separate package.json and node_modules. This method will allow any additional application programming and different frontend along react, also can come up with react on top that compiles as the main package.json and using directly the public folder. Since `react 18` render method of the app requires `createRoot` function of `react-dom/client` also encapsulate the code in `window.bodyOnLoad` and add `onload` attribute to the html template body tag by loading the main `dist/bundle.js` in the head. Webpack must add scripts for watch/production/development to the package, define the module rules, configure the output of the entry point, resolve build path in `public_html/dist` and use production mode at the end.  
+
+All pages are loaded by the `public_html` folder using react bundle, nest must implement the api using `nest g resource name` and test it with postman.  
