@@ -14,6 +14,7 @@ const serve_static_1 = require("@nestjs/serve-static");
 const config_1 = require("@nestjs/config");
 const path_1 = require("path");
 const parts_module_1 = require("./parts/parts.module");
+const nest_knexjs_1 = require("nest-knexjs");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
@@ -24,7 +25,23 @@ exports.AppModule = AppModule = __decorate([
                 rootPath: (0, path_1.join)(__dirname, '../../', 'public_html'),
                 exclude: ['/api/(.*)'],
             }),
-            config_1.ConfigModule.forRoot(),
+            config_1.ConfigModule.forRoot({
+                envFilePath: process.env.NODE_ENV == 'rootprod' ? 'nest-backend/.env' : '.env',
+            }),
+            nest_knexjs_1.KnexModule.forRootAsync({
+                useFactory: () => ({
+                    config: {
+                        client: process.env.DB_TYPE,
+                        connection: {
+                            host: process.env.DB_HOST,
+                            user: process.env.DB_NAME,
+                            password: process.env.DB_PASS,
+                            port: process.env.DB_PORT,
+                            database: process.env.SCHEMA,
+                        },
+                    },
+                }),
+            }),
             parts_module_1.PartsModule,
         ],
         controllers: [app_controller_1.AppController],

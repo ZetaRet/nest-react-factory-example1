@@ -17,4 +17,8 @@ __Technology__ Set:
 ## Seeding
 
 Loading of an example electric vehicle with all the parts by name, model and quantity.  
+Seeding of 2 vendors: Thunderbolt, Kron.  
+Seeding of 1 vehicle assembly and its parts by vendor in each table mobile_parts/store/vehicle_parts.  
+Seeding of invoice services.  
+
 Introductory to the __Skyline Road__ modular technology for electric and hybrid vehicles by __Blacktower Skyscraper__ and the automation principles based on permanent internet connection requiring our state platformed.  

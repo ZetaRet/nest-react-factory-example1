@@ -5,6 +5,7 @@ import { ServeStaticModule } from '@nestjs/serve-static';
 import { ConfigModule } from '@nestjs/config';
 import { join } from 'path';
 import { PartsModule } from './parts/parts.module';
+import { KnexModule } from 'nest-knexjs';
 
 @Module({
   imports: [
@@ -12,7 +13,24 @@ import { PartsModule } from './parts/parts.module';
       rootPath: join(__dirname, '../../', 'public_html'),
       exclude: ['/api/(.*)'],
     }),
-    ConfigModule.forRoot(),
+    ConfigModule.forRoot({
+      envFilePath:
+        process.env.NODE_ENV == 'rootprod' ? 'nest-backend/.env' : '.env',
+    }),
+    KnexModule.forRootAsync({
+      useFactory: () => ({
+        config: {
+          client: process.env.DB_TYPE,
+          connection: {
+            host: process.env.DB_HOST,
+            user: process.env.DB_NAME,
+            password: process.env.DB_PASS,
+            port: process.env.DB_PORT,
+            database: process.env.SCHEMA,
+          },
+        },
+      }),
+    }),
     PartsModule,
   ],
   controllers: [AppController],

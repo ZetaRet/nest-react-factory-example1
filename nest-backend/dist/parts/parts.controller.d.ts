@@ -5,7 +5,31 @@ export declare class PartsController {
     private readonly partsService;
     constructor(partsService: PartsService);
     create(createPartDto: CreatePartDto): string;
-    findAll(): string;
+    findAll(): import("knex").Knex.QueryBuilder<{}, ({
+        _base: {};
+        _hasSelection: boolean;
+        _keys: string;
+        _aliases: {};
+        _single: boolean;
+        _intersectProps: {};
+        _unionProps: unknown;
+    } | {
+        _base: {};
+        _hasSelection: false;
+        _keys: never;
+        _aliases: {};
+        _single: false;
+        _intersectProps: {};
+        _unionProps: never;
+    })[] | {
+        _base: {};
+        _hasSelection: false;
+        _keys: never;
+        _aliases: {};
+        _single: false;
+        _intersectProps: {};
+        _unionProps: never;
+    }[]>;
     findOne(id: string): string;
     update(id: string, updatePartDto: UpdatePartDto): string;
     remove(id: string): string;
