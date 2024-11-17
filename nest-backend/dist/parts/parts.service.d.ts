@@ -3,8 +3,10 @@ import { UpdatePartDto } from './dto/update-part.dto';
 import { Knex } from 'knex';
 export declare class PartsService {
     private knex;
+    private debug;
     constructor(knex: Knex);
-    create(createPartDto: CreatePartDto): string;
+    private returnError;
+    create(createPartDto: CreatePartDto): Promise<any>;
     findAll(): Knex.QueryBuilder<{}, ({
         _base: {};
         _hasSelection: boolean;
@@ -30,7 +32,7 @@ export declare class PartsService {
         _intersectProps: {};
         _unionProps: never;
     }[]>;
-    findOne(id: number): string;
+    findOne(id: number): Promise<any>;
     update(id: number, updatePartDto: UpdatePartDto): string;
     remove(id: number): string;
 }

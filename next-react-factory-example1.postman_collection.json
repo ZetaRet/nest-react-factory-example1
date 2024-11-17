@@ -1,0 +1,103 @@
+{
+	"info": {
+		"_postman_id": "2d6586bb-336d-47bb-87f4-f1b891db7f08",
+		"name": "next-react-factory-example1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Parts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/parts/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"parts",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Part by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/parts/1/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"parts",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Part",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"my first part\",\n    \"type\": \"default\",\n    \"model\": \"PART-ID1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/parts/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"parts",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://127.0.0.1:4400",
+			"type": "default"
+		}
+	]
+}

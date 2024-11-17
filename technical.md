@@ -2,11 +2,11 @@
 
 __Database:__  
 
-mobile_parts - id, name, type, model, created_at, updated_at  
-vendors - id, name, created_at, updated_at  
-assemble_vehicle - id, name, model, engine, created_at, updated_at  
-store - id, parts_id, vendor_id, price, count, created_at, updated_at  
-vehicle_parts - id, vehicle_id, parts_id, vendor_id, count, created_at, updated_at  
+mobile_parts - id, name, type, model, createdAt, updatedAt  
+vendors - id, name, createdAt, updatedAt  
+assemble_vehicle - id, name, model, engine, createdAt, updatedAt  
+store - id, parts_id, vendor_id, price, count, createdAt, updatedAt  
+vehicle_parts - id, vehicle_id, parts_id, vendor_id, count, createdAt, updatedAt  
 
 __ENUM:__  
 
