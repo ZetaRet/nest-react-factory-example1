@@ -6,6 +6,7 @@ import { ConfigModule } from '@nestjs/config';
 import { join } from 'path';
 import { PartsModule } from './parts/parts.module';
 import { KnexModule } from 'nest-knexjs';
+import { VendorsModule } from './vendors/vendors.module';
 
 @Module({
   imports: [
@@ -32,6 +33,7 @@ import { KnexModule } from 'nest-knexjs';
       }),
     }),
     PartsModule,
+    VendorsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
