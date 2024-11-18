@@ -24,10 +24,10 @@ Add Parts to Vehicle - vehicle selector, part selector, count (view parts)
 
 __Database:__  
 
-invoices - id, client, total, final, created_at  
-invoice_service - id, name, price, created_at  
-invoice_parts - id, invoices_id, parts_id, price, count, created_at  
-invoice_array - id, invoices_id, invoice_service_id, price, count, created_at  
+invoices - id, client, total, final, created_at, updated_at  
+invoice_service - id, name, price, created_at, updated_at  
+invoice_parts - id, invoices_id, parts_id, price, count, created_at, updated_at  
+invoice_array - id, invoices_id, invoice_service_id, price, count, created_at, updated_at  
 
 __React API Ajax:__  
 
