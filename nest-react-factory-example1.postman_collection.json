@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "2d6586bb-336d-47bb-87f4-f1b891db7f08",
-		"name": "next-react-factory-example1",
+		"name": "nest-react-factory-example1",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -230,6 +230,172 @@
 					"path": [
 						"api",
 						"vendors",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Vehicles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/vehicles/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"vehicles",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Vehicle by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/vehicles/1/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"vehicles",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Vehicle",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Vehicle One\",\n    \"model\": \"V-1\",\n    \"engine\": \"electric\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/vehicles/create",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"vehicles",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Vehicle",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Vehicle One Upg\",\n    \"model\": \"V-2\",\n    \"engine\": \"hybrid\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/vehicles/update/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"vehicles",
+						"update",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Vehicle Part",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"vehicle_id\": 1,\n    \"parts_id\": 1,\n    \"vendor_id\": 1,\n    \"count\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/vehicles/addpart",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"vehicles",
+						"addpart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Vehicle Parts by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/vehicles/parts/1/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"vehicles",
+						"parts",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Vehicle Parts Details by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/vehicles/parts_details/1/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"vehicles",
+						"parts_details",
 						"1",
 						""
 					]

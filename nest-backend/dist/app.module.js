@@ -16,6 +16,7 @@ const path_1 = require("path");
 const parts_module_1 = require("./parts/parts.module");
 const nest_knexjs_1 = require("nest-knexjs");
 const vendors_module_1 = require("./vendors/vendors.module");
+const vehicles_module_1 = require("./vehicles/vehicles.module");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
@@ -45,6 +46,7 @@ exports.AppModule = AppModule = __decorate([
             }),
             parts_module_1.PartsModule,
             vendors_module_1.VendorsModule,
+            vehicles_module_1.VehiclesModule,
         ],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],

@@ -7,6 +7,7 @@ import { join } from 'path';
 import { PartsModule } from './parts/parts.module';
 import { KnexModule } from 'nest-knexjs';
 import { VendorsModule } from './vendors/vendors.module';
+import { VehiclesModule } from './vehicles/vehicles.module';
 
 @Module({
   imports: [
@@ -33,6 +34,7 @@ import { VendorsModule } from './vendors/vendors.module';
     }),
     PartsModule,
     VendorsModule,
+    VehiclesModule,
   ],
   controllers: [AppController],
   providers: [AppService],
