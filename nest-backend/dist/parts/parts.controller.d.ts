@@ -31,6 +31,6 @@ export declare class PartsController {
         _unionProps: never;
     }[]>;
     findOne(id: string): Promise<any>;
-    update(id: string, updatePartDto: UpdatePartDto): string;
-    remove(id: string): string;
+    update(id: string, updatePartDto: UpdatePartDto): Promise<any>;
+    remove(id: string): Promise<any>;
 }

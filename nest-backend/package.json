@@ -1,6 +1,6 @@
 {
   "name": "nest-backend",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "author": "",
   "private": true,
@@ -18,7 +18,8 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "migrate": "knex migrate:latest"
+    "migrate": "knex migrate:latest",
+    "seedvendors": "knex seed:run --specific=seed_vendors.js"
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",

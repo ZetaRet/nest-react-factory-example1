@@ -33,6 +33,6 @@ export declare class PartsService {
         _unionProps: never;
     }[]>;
     findOne(id: number): Promise<any>;
-    update(id: number, updatePartDto: UpdatePartDto): string;
-    remove(id: number): string;
+    update(id: number, updatePartDto: UpdatePartDto): Promise<any>;
+    remove(id: number): Promise<any>;
 }

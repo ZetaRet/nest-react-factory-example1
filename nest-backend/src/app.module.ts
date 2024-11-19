@@ -15,8 +15,7 @@ import { VendorsModule } from './vendors/vendors.module';
       exclude: ['/api/(.*)'],
     }),
     ConfigModule.forRoot({
-      envFilePath:
-        process.env.NODE_ENV == 'rootprod' ? 'nest-backend/.env' : '.env',
+      envFilePath: process.env.NODE_ENV == 'rootprod' ? 'nest-backend/.env' : '.env',
     }),
     KnexModule.forRootAsync({
       useFactory: () => ({
