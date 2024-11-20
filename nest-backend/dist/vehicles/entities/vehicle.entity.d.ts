@@ -1,3 +1,8 @@
+export declare enum EngineTypes {
+    electric = "electric",
+    hybrid = "hybrid",
+    others = "others"
+}
 export interface VehicleInterface {
     id?: number;
     name: string;

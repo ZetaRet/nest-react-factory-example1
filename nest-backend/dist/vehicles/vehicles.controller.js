@@ -17,6 +17,7 @@ const common_1 = require("@nestjs/common");
 const vehicles_service_1 = require("./vehicles.service");
 const create_vehicle_dto_1 = require("./dto/create-vehicle.dto");
 const update_vehicle_dto_1 = require("./dto/update-vehicle.dto");
+const vehicle_entity_1 = require("./entities/vehicle.entity");
 let VehiclesController = class VehiclesController {
     constructor(vehiclesService) {
         this.vehiclesService = vehiclesService;
@@ -26,6 +27,9 @@ let VehiclesController = class VehiclesController {
     }
     findAll() {
         return this.vehiclesService.findAll();
+    }
+    engineTypes() {
+        return Object.values(vehicle_entity_1.EngineTypes);
     }
     findOne(id) {
         return this.vehiclesService.findOne(+id);
@@ -57,6 +61,12 @@ __decorate([
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", void 0)
 ], VehiclesController.prototype, "findAll", null);
+__decorate([
+    (0, common_1.Get)('engine_types'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], VehiclesController.prototype, "engineTypes", null);
 __decorate([
     (0, common_1.Get)(':id'),
     __param(0, (0, common_1.Param)('id')),

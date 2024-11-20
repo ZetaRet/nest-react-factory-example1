@@ -1,9 +1,10 @@
 import * as z from 'zod';
+import { EngineTypes } from '../entities/vehicle.entity';
 
 export const CreateVehicleZod = z.object({
   name: z.string(),
   model: z.string(),
-  engine: z.string(),
+  engine: z.nativeEnum(EngineTypes),
 });
 
 export class CreateVehicleDto {

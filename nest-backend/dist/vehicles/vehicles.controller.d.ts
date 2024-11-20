@@ -1,6 +1,7 @@
 import { VehiclesService } from './vehicles.service';
 import { AddPartDto, CreateVehicleDto } from './dto/create-vehicle.dto';
 import { UpdateVehicleDto } from './dto/update-vehicle.dto';
+import { EngineTypes } from './entities/vehicle.entity';
 export declare class VehiclesController {
     private readonly vehiclesService;
     constructor(vehiclesService: VehiclesService);
@@ -30,6 +31,7 @@ export declare class VehiclesController {
         _intersectProps: {};
         _unionProps: never;
     }[]>;
+    engineTypes(): EngineTypes[];
     findOne(id: string): Promise<any>;
     update(id: string, updateVehicleDto: UpdateVehicleDto): Promise<any>;
     addPart(addPartDto: AddPartDto): Promise<any>;

@@ -1,16 +1,17 @@
 import * as z from 'zod';
+import { EngineTypes } from '../entities/vehicle.entity';
 export declare const CreateVehicleZod: z.ZodObject<{
     name: z.ZodString;
     model: z.ZodString;
-    engine: z.ZodString;
+    engine: z.ZodNativeEnum<typeof EngineTypes>;
 }, "strip", z.ZodTypeAny, {
     name?: string;
     model?: string;
-    engine?: string;
+    engine?: EngineTypes;
 }, {
     name?: string;
     model?: string;
-    engine?: string;
+    engine?: EngineTypes;
 }>;
 export declare class CreateVehicleDto {
     name: string;

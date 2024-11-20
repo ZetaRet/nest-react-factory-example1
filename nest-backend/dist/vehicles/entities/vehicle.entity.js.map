@@ -1,1 +1,1 @@
-{"version":3,"file":"vehicle.entity.js","sourceRoot":"","sources":["../../../src/vehicles/entities/vehicle.entity.ts"],"names":[],"mappings":";;;AASA,MAAa,OAAO;CAOnB;AAPD,0BAOC;AAED,MAAa,WAAW;CAQvB;AARD,kCAQC"}
+{"version":3,"file":"vehicle.entity.js","sourceRoot":"","sources":["../../../src/vehicles/entities/vehicle.entity.ts"],"names":[],"mappings":";;;AAAA,IAAY,WAIX;AAJD,WAAY,WAAW;IACrB,oCAAqB,CAAA;IACrB,gCAAiB,CAAA;IACjB,gCAAiB,CAAA;AACnB,CAAC,EAJW,WAAW,2BAAX,WAAW,QAItB;AAWD,MAAa,OAAO;CAOnB;AAPD,0BAOC;AAED,MAAa,WAAW;CAQvB;AARD,kCAQC"}

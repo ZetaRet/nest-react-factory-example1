@@ -277,6 +277,25 @@
 			"response": []
 		},
 		{
+			"name": "Get Engine Types",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/vehicles/engine_types",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"vehicles",
+						"engine_types"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Create Vehicle",
 			"request": {
 				"method": "POST",
@@ -396,6 +415,122 @@
 						"api",
 						"vehicles",
 						"parts_details",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Store",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/store/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"store",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Store By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/store/1/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"store",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Store Details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/store/details",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"store",
+						"details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Store Item",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"parts_id\": 1,\n    \"vendor_id\": 1,\n    \"count\": 1,\n    \"price\": 10\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/store/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"store",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Store Item",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"count\": 2,\n    \"price\": 11.10\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/store/update/1/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"store",
+						"update",
 						"1",
 						""
 					]
