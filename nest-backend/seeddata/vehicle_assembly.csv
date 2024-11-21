@@ -1,0 +1,113 @@
+name,model,count,price
+car body for welding,BW-XZ-765,1,10000
+chassis base,CB-XZ-765,1,7000
+chassis framework,CF-XZ-765,1,9500
+body vehicle structure plans,BVS-PLAN-3,1,1000
+front suspensions,FS-CF-3,1,1000
+rear suspensions,RS-CF-3,1,1000
+suspension system parts,SSP-3,1,1000
+framework protectors and shields package,CF-PSP-3,1,1000
+silencers package,SP-3,1,1000
+roof,R-XZ-765,1,1000
+sun roof,SR-XZ-765,1,1000
+front doors left/right,FD-XZ-765,1,1000
+back doors left/right,BD-XZ-765,1,1000
+front door handles left/right,FDH-BLACK-3,1,1000
+back door handles left/right,BDH-BLACK-3,1,1000
+rearview mirrors left/right,RVM-XZ-3,1,1000
+front automatic windows left/right,FAW-XZ-REFLECT,1,1000
+back black windows left/right,BBW-XZ-BLACK,1,1000
+engine hood,EH-XZ-765,1,1000
+trunk,T-XZ-765,1,1000
+taillights left/right,TL-XZ-3,1,1000
+back deck lid,BD-LID-XZ-765,1,1000
+back bottom panel,BB-P-XZ-765,1,1000
+rear plans for small parts,REAR-PLAN-SP-3,1,1000
+front-end plans for small parts,FEND-PLAN-SP-3,1,1000
+side plans for small parts,SIDE-PLAN-SP-3,1,1000
+side bottom panel with trims left/right,SB-PT-XZ-765,1,1000
+front bottom panel,FB-P-XZ-765,1,1000
+upgradable spoilers package,US-PACK-3,1,1000
+black titanium rims,BT-RIM-21-XZ-765,4,1000
+universal wheels with tires 21 inch,UW-T-21-XZ-765,4,1000
+front wheels brakes left/right,FWB-XZ-765,1,1000
+back wheels brakes left/right,BWB-XZ-765,1,1000
+shock absorbers,SA-XZ-765,4,1000
+front windscreen,FWS-XZ-765,1,1000
+rear window screen,RWS-XZ-765,1,1000
+windscreen wiper,WW-XZ-765,1,1000
+headlight left/right,HL-XZ-765,1,1000
+front bumper,FRONT-BUMP-XZ-765,1,1000
+front central face,FC-FACE-XZ-765,1,1000
+back bumper,BACK-BUMP-XZ-765,1,1000
+interior dashboard,INT-DASH-XZ-765,1,1000
+dashboard panel package,DASH-PP-3,1,1000
+dashboard panel wires,DASH-P-WIRE-3,1,1000
+dashboard computer,DASH-COM-3,1,1000
+dashboard camera,DASH-CAM-3,1,1000
+dashboard panel electronics,DASH-PEL-3,1,1000
+main computer ports,MCP-3,1,1000
+central computer software,CCS-XZ-765,1,1000
+central console,CC-XZ-3,1,1000
+steering wheel,SW-XZ-3,1,1000
+steering wheel wires,SW-WIRE-3,1,1000
+front interior seats,FI-S-XZ-3,2,1000
+back interior seats,BI-S-XZ-3,1,1000
+ceiling roof wires,CR-WIRE-3,1,1000
+floor wires,F-WIRE-3,1,1000
+door wires,D-WIRE-3,4,1000
+trunk wires,T-WIRE-3,1,1000
+interior wiring,INT-WIRE-3,1,1000
+inner front door panel left,IN-FDPL-XZ-765,1,1000
+inner front door panel right,IN-FDPR-XZ-765,1,1000
+inner backdoors panels left/right,1000IN-BDP-XZ-765,1,1000
+front-end wiring and inner framework,FE-WIRE-INF-XZ-765,1,1000
+under the hood parts,UHP-XZ-765,1,1000
+automatic transmission,AUTO-T-XZ-765,1,1000
+console and dashboard connectors,CD-C-3,1,1000
+computer electronics connectors,CEL-C-3,1,1000
+electric engine,EL-ENGINE-XZ-765,1,6000
+electric engine batteries array,EL-ENGINE-BA-3,1,4000
+electric engine back batteries array,EL-ENGINE-BBA-3,1,3000
+traction battery pack,TR-BP-3,1,2000
+electric motor,EL-MOTOR-XZ-765,1,5000
+electric engine cover,EL-ENGINE-C-XZ-765,1,1000
+interior sensors,INT-S-3,1,1000
+electronics and monitoring sensors,EL-MONITOR-S-3,1,1000
+diagnostics and logging,DIAG-LOG-3,1,1000
+exterior sensors,EXT-S-3,1,1000
+speed sensors,SPEED-S-3,1,1000
+acceleration controller,ACC-C-3,1,1000
+stop controller,STOP-C-3,1,1000
+autopilot and copilot integration system,AUTOC-PILOT-IS-3,1,1000
+parking cameras and sensors,PARK-CAMS-3,1,1000
+vehicle air conditioning system,VACS-3,1,1000
+thermal system,TS-3,1,1000
+navigation system,NS-3,1,1000
+emergency system,ES-3,1,1000
+skyscraper skyline roads automation system,SSR-AUTOS-3,1,1000
+skyline roads tracking system,SR-TRACKS-3,1,1000
+skyline sideroad communication system,SS-COMS-3,1,1000
+skyline road emergency charger,SR-EMEC-3,1,1000
+skyline road emergency diagnostic report,SR-EMEDR-3,1,1000
+parking elevator system,PARK-ELEVS-3,1,1000
+charge port,CHARGE-PORT-3,1,1000
+static charger,STATIC-CHARGE-3,1,1000
+on board charger,OB-CHARGE-3,1,1000
+electronic controller,EL-CONTROL-3,1,1000
+compressor,COMPRESS-3,1,1000
+inverter,INVERT-3,1,1000
+converter,CONVERT-3,1,1000
+interior finishing parts package,INT-FINP-PACK-XZ-765,1,1000
+exterior finishing parts package,EXT-FINP-PACK-XZ-765,1,1000
+manual and instructions to use,MANIU-XZ-765,1,1000
+software setup and documentation,SOFT-SETUPDOC-XZ-765,1,1000
+internet connection learning book,IC-LB-XZ-765,1,1000
+protective coating and finishing,PRO-CF-XZ-765,1,1000
+recycling plans,REC-PLAN-XZ-765,1,1000
+repair plans,REP-PLAN-XZ-765,1,1000
+adaptive modules package,ADAPT-MOD-PACK-XZ-765,1,1000
+lightweight materials package,LW-MAT-PACK-XZ-765,1,1000
+change small parts types package,CHANGE-SP-TYPE-3XZ765-PACK,1,1000
+change wires types package,CHANGE-WIRE-TYPE-3XZ765-PACK,1,1000
+light types package,LIGHT-TYPE-XZ765-PACK,1,1000

@@ -49,7 +49,7 @@ dashboard panel package, DASH-PP-3 - 1
 dashboard panel wires, DASH-P-WIRE-3 - 1  
 dashboard computer, DASH-COM-3 - 1  
 dashboard camera, DASH-CAM-3 - 1  
-dashboard panel electronics, DASH-PEL-3  - 1  
+dashboard panel electronics, DASH-PEL-3 - 1  
 main computer ports, MCP-3 - 1  
 central computer software, CCS-XZ-765 - 1  
 central console, CC-XZ-3 - 1  
@@ -63,8 +63,8 @@ door wires, D-WIRE-3 - 4
 trunk wires, T-WIRE-3 - 1  
 interior wiring, INT-WIRE-3 - 1  
 inner front door panel left, IN-FDPL-XZ-765 - 1  
-inner front door panel right, IN-FDPR-XZ-765  - 1  
-inner backdoors panels left/right,  IN-BDP-XZ-765  - 1  
+inner front door panel right, IN-FDPR-XZ-765 - 1  
+inner backdoors panels left/right, IN-BDP-XZ-765 - 1  
 front-end wiring and inner framework, FE-WIRE-INF-XZ-765 - 1  
 under the hood parts, UHP-XZ-765 - 1  
 automatic transmission, AUTO-T-XZ-765 - 1  

@@ -20,7 +20,8 @@
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "migrate": "knex migrate:latest",
     "seedvendors": "knex seed:run --specific=seed_vendors.js",
-    "seedservices": "knex seed:run --specific=seed_invoice_services.js"
+    "seedservices": "knex seed:run --specific=seed_invoice_services.js",
+    "seedvehicle": "knex seed:run --specific=seed_vehicle_assembly.js"
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",
