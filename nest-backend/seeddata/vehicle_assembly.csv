@@ -60,7 +60,7 @@ trunk wires,T-WIRE-3,1,1000
 interior wiring,INT-WIRE-3,1,1000
 inner front door panel left,IN-FDPL-XZ-765,1,1000
 inner front door panel right,IN-FDPR-XZ-765,1,1000
-inner backdoors panels left/right,1000IN-BDP-XZ-765,1,1000
+inner backdoors panels left/right,IN-BDP-XZ-765,1,1000
 front-end wiring and inner framework,FE-WIRE-INF-XZ-765,1,1000
 under the hood parts,UHP-XZ-765,1,1000
 automatic transmission,AUTO-T-XZ-765,1,1000

@@ -18,6 +18,8 @@ __Technology__ Set:
 
 Migrate to latest in `nest-backend` using `knex migrate:latest` or `npm run migrate` or from VSCode hover `migrate` scripts of `package.json` and __Run Script__.  
 Seeding in the same folder using `npm run seedvendors`.  
+Seeding in the same folder using `npm run seedvehicle`.  
+Seeding in the same folder using `npm run seedservices`.  
 
 Loading of an example electric vehicle with all the parts by name, model and quantity.  
 Seeding of 2 vendors: Thunderbolt, Kron.  
