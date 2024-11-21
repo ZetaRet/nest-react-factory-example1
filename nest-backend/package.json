@@ -19,7 +19,8 @@
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "migrate": "knex migrate:latest",
-    "seedvendors": "knex seed:run --specific=seed_vendors.js"
+    "seedvendors": "knex seed:run --specific=seed_vendors.js",
+    "seedservices": "knex seed:run --specific=seed_invoice_services.js"
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",
