@@ -537,6 +537,430 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Get Invoices",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/invoices/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"invoices",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Invoice By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/invoices/1/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"invoices",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Invoice",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"client\": \"Client 2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/invoices/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"invoices",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Invoice",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"client\": \"Client 1\",\n    \"final\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/invoices/update/1/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"invoices",
+						"update",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Clear Invoice",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/invoices/clear/1/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"invoices",
+						"clear",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Invoice Total",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/invoices/total/1/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"invoices",
+						"total",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Invoice Service",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"New Service\",\n    \"price\": 100\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/invoices/services/add/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"invoices",
+						"services",
+						"add",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Invoice Services",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/invoices/services/all/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"invoices",
+						"services",
+						"all",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Invoice Parts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/invoices/parts/1/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"invoices",
+						"parts",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Invoice Part",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"store_id\": 1,\n    \"count\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/invoices/add_parts/1/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"invoices",
+						"add_parts",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Invoice Part",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"count\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/invoices/update_parts/1/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"invoices",
+						"update_parts",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Invoice Part",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/invoices/remove_parts/1/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"invoices",
+						"remove_parts",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Invoice Array",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"service_id\": 1,\n    \"count\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/invoices/add_array/1/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"invoices",
+						"add_array",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Invoice Array",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/invoices/array/1/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"invoices",
+						"array",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Invoice Array",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"count\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/invoices/update_array/1/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"invoices",
+						"update_array",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Invoice Array",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/invoices/remove_array/1/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"invoices",
+						"remove_array",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Invoice Vehicle",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"vehicle_id\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/invoices/add_vehicle/1/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"invoices",
+						"add_vehicle",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"event": [

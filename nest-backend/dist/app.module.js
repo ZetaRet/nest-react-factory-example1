@@ -18,6 +18,7 @@ const nest_knexjs_1 = require("nest-knexjs");
 const vendors_module_1 = require("./vendors/vendors.module");
 const vehicles_module_1 = require("./vehicles/vehicles.module");
 const store_module_1 = require("./store/store.module");
+const invoices_module_1 = require("./invoices/invoices.module");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
@@ -49,6 +50,7 @@ exports.AppModule = AppModule = __decorate([
             vendors_module_1.VendorsModule,
             vehicles_module_1.VehiclesModule,
             store_module_1.StoreModule,
+            invoices_module_1.InvoicesModule,
         ],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],

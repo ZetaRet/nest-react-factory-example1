@@ -9,6 +9,7 @@ import { KnexModule } from 'nest-knexjs';
 import { VendorsModule } from './vendors/vendors.module';
 import { VehiclesModule } from './vehicles/vehicles.module';
 import { StoreModule } from './store/store.module';
+import { InvoicesModule } from './invoices/invoices.module';
 
 @Module({
   imports: [
@@ -37,6 +38,7 @@ import { StoreModule } from './store/store.module';
     VendorsModule,
     VehiclesModule,
     StoreModule,
+    InvoicesModule,
   ],
   controllers: [AppController],
   providers: [AppService],
