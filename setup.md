@@ -35,6 +35,7 @@ __React__ npm __package.json__ install:
 - react 18.3.1  
 - react-dom 18.3.1  
 - react-router 6.28.0  
+- react-router-dom 6.28.0  
 - @babel/core 7.26.0  
 - @babel/preset-react 7.25.9  
 - babel-loader 9.2.1  
