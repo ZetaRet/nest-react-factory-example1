@@ -2,6 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes, Link, Outlet } from "react-router-dom";
 import MobilePartsCreate from "./MobilePartsCreate";
 import MobilePartsList from "./MobilePartsList";
+import VendorsCreate from "./VendorsCreate";
+import VendorsList from "./VendorsList";
 
 const Home = () => {
 	return (
@@ -34,6 +36,17 @@ const Vendors = () => {
 	return (
 		<div>
 			<h2>Vendors</h2>
+			<nav>
+				<ul>
+					<li>
+						<Link to="create">Create Vendor</Link>
+					</li>
+					<li>
+						<Link to="list">List Vendors</Link>
+					</li>
+				</ul>
+			</nav>
+			<Outlet />
 		</div>
 	);
 };
@@ -95,7 +108,10 @@ export default function App() {
 						<Route path="create" element={<MobilePartsCreate />} />
 						<Route path="list" element={<MobilePartsList />} />
 					</Route>
-					<Route path="/vendors/" element={<Vendors />} />
+					<Route path="/vendors/" element={<Vendors />}>
+						<Route path="create" element={<VendorsCreate />} />
+						<Route path="list" element={<VendorsList />} />
+					</Route>
 					<Route path="/vehicles/" element={<Vehicles />} />
 					<Route path="/store/" element={<Store />} />
 					<Route path="/invoices/" element={<Invoices />} />

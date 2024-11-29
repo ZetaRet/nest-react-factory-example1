@@ -1,7 +1,7 @@
 import React from "react";
 import ReactFetchComponent from "./ReactFetchComponent";
 
-export default class MobilePartsCreate extends ReactFetchComponent {
+export default class VendorsCreate extends ReactFetchComponent {
 	constructor(props) {
 		super(props);
 		this.state = { fetching: false };
@@ -9,7 +9,7 @@ export default class MobilePartsCreate extends ReactFetchComponent {
 	}
 
 	componentWillUnmount() {
-		console.log("Unmount Parts Create");
+		console.log("Unmount Vendors Create");
 	}
 
 	onSubmit(e) {
@@ -18,9 +18,7 @@ export default class MobilePartsCreate extends ReactFetchComponent {
 		if (this.state.fetching) return false;
 		const form = e.target;
 		const nameinp = form.name;
-		const typeinp = form.type;
-		const modelinp = form.model;
-		const data = { name: nameinp.value, type: typeinp.value, model: modelinp.value };
+		const data = { name: nameinp.value };
 		console.log(data);
 		this.fetchAPI(form.action, form.method, data, (d) => {
 			o.setState({ fetching: false });
@@ -30,13 +28,11 @@ export default class MobilePartsCreate extends ReactFetchComponent {
 	}
 
 	render() {
-		console.log("Render Parts Create");
+		console.log("Render Vendors Create");
 		return (
 			<div>
-				<form method="POST" action="/api/parts/" onSubmit={this.onSubmit}>
-					<input type="text" name="name" placeholder="Part Name" required={true} minLength={1} />
-					<input type="text" name="type" placeholder="Part Type" required={true} minLength={1} />
-					<input type="text" name="model" placeholder="Part Model" required={true} minLength={1} />
+				<form method="POST" action="/api/vendors/" onSubmit={this.onSubmit}>
+					<input type="text" name="name" placeholder="Vendor Name" required={true} minLength={1} />
 					<br />
 					<button>Submit</button>
 				</form>
