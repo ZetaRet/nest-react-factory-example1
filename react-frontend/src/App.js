@@ -1,5 +1,7 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Link, Outlet } from "react-router-dom";
+import MobilePartsCreate from "./MobilePartsCreate";
+import MobilePartsList from "./MobilePartsList";
 
 const Home = () => {
 	return (
@@ -13,6 +15,17 @@ const MobileParts = () => {
 	return (
 		<div>
 			<h2>Mobile Parts</h2>
+			<nav>
+				<ul>
+					<li>
+						<Link to="create">Create Parts</Link>
+					</li>
+					<li>
+						<Link to="list">List Parts</Link>
+					</li>
+				</ul>
+			</nav>
+			<Outlet />
 		</div>
 	);
 };
@@ -78,7 +91,10 @@ export default function App() {
 				</nav>
 				<Routes>
 					<Route path="/" element={<Home />} />
-					<Route path="/mobile_parts/" element={<MobileParts />} />
+					<Route path="/mobile_parts/" element={<MobileParts />}>
+						<Route path="create" element={<MobilePartsCreate />} />
+						<Route path="list" element={<MobilePartsList />} />
+					</Route>
 					<Route path="/vendors/" element={<Vendors />} />
 					<Route path="/vehicles/" element={<Vehicles />} />
 					<Route path="/store/" element={<Store />} />
