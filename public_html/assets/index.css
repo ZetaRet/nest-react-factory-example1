@@ -51,6 +51,13 @@ form input {
     margin: 3px;
 }
 
+form select {
+    display: inline-block;
+    border-radius: 3px;
+    padding: 5px;
+    margin: 3px;
+}
+
 form button {
     display: inline-block;
     border-radius: 3px;

@@ -4,6 +4,9 @@ import MobilePartsCreate from "./MobilePartsCreate";
 import MobilePartsList from "./MobilePartsList";
 import VendorsCreate from "./VendorsCreate";
 import VendorsList from "./VendorsList";
+import VehicleCreate from "./VehicleCreate";
+import VehicleList from "./VehicleList";
+import VehicleAssembly from "./VehicleAssembly";
 
 const Home = () => {
 	return (
@@ -55,6 +58,20 @@ const Vehicles = () => {
 	return (
 		<div>
 			<h2>Vehicles</h2>
+			<nav>
+				<ul>
+					<li>
+						<Link to="create">Create Vehicle</Link>
+					</li>
+					<li>
+						<Link to="list">List Vehicle</Link>
+					</li>
+					<li>
+						<Link to="assembly">Assemble Vehicle</Link>
+					</li>
+				</ul>
+			</nav>
+			<Outlet />
 		</div>
 	);
 };
@@ -112,7 +129,11 @@ export default function App() {
 						<Route path="create" element={<VendorsCreate />} />
 						<Route path="list" element={<VendorsList />} />
 					</Route>
-					<Route path="/vehicles/" element={<Vehicles />} />
+					<Route path="/vehicles/" element={<Vehicles />}>
+						<Route path="create" element={<VehicleCreate />} />
+						<Route path="list" element={<VehicleList />} />
+						<Route path="assembly" element={<VehicleAssembly />} />
+					</Route>
 					<Route path="/store/" element={<Store />} />
 					<Route path="/invoices/" element={<Invoices />} />
 				</Routes>

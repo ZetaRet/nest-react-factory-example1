@@ -21,9 +21,9 @@ List Vendors
 Product Form - part selector, count  
 Edit Store - part, price, count  
 List Store  
-Add Vehicle Assembly - name, mode, engine  
+Add Vehicle Assembly - name, model, engine  
 List Vehicles  
-Add Parts to Vehicle - vehicle selector, part selector, count (view parts)  
+Add Parts to Vehicle - vehicle selector, part selector, vendor selector, count (view parts)  
 
 ## Industrial Client Center
 

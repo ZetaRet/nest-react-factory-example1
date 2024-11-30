@@ -21,6 +21,7 @@ export default class VendorsCreate extends ReactFetchComponent {
 		const data = { name: nameinp.value };
 		console.log(data);
 		this.fetchAPI(form.action, form.method, data, (d) => {
+			nameinp.value = "";
 			o.setState({ fetching: false });
 		});
 		o.setState({ fetching: true });

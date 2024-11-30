@@ -23,6 +23,9 @@ export default class MobilePartsCreate extends ReactFetchComponent {
 		const data = { name: nameinp.value, type: typeinp.value, model: modelinp.value };
 		console.log(data);
 		this.fetchAPI(form.action, form.method, data, (d) => {
+			nameinp.value = "";
+			typeinp.value = "";
+			modelinp.value = "";
 			o.setState({ fetching: false });
 		});
 		o.setState({ fetching: true });
