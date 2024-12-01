@@ -26,10 +26,14 @@ export default class VehicleAssembly extends ReactFetchComponent {
 		const o = this;
 		console.log("Mount Vehicle Assembly");
 		this.fetchAPI("/api/vehicles/", "GET", null, (d) => {
-			o.setState({ vehicles: d });
-			o.fetchAPI("/api/vehicles/parts_details/" + d[0].id + "/", "GET", null, (dd) => {
-				o.setState({ f1: false, vehicle_parts: dd });
-			});
+			let f1state = { vehicles: d };
+			if (!d[0]) f1state.f1 = false;
+			o.setState(f1state);
+			if (d[0]) {
+				o.fetchAPI("/api/vehicles/parts_details/" + d[0].id + "/", "GET", null, (dd) => {
+					o.setState({ f1: false, vehicle_parts: dd });
+				});
+			}
 		});
 		this.fetchAPI("/api/parts/", "GET", null, (d) => {
 			o.setState({ f2: false, parts: d });
@@ -97,14 +101,14 @@ export default class VehicleAssembly extends ReactFetchComponent {
 		const vendOptions = vendors.map((e) => <option value={e.id}>{e.name}</option>);
 		const vehicle_parts = this.state.vehicle_parts;
 		const vehparts = vehicle_parts.map((e) => (
-			<div ref={e.id}>
+			<div key={e.id} className="listitem">
 				<span>{e.name}</span>, <span>{e.type}</span>, <span>{e.model}</span>, <span>{e.count}</span>
 			</div>
 		));
 		const fetching = this.isFetching();
 		return (
 			<div>
-				<form method="POST" action="/api/vehicles/addpart" onSubmit={this.onSubmit}>
+				<form className="va_form" method="POST" action="/api/vehicles/addpart" onSubmit={this.onSubmit}>
 					<select name="vehicle_id" onChange={this.onChangeVehicle} ref={(e) => (this.vehicle_id = e)}>
 						{vehOptions}
 					</select>
@@ -115,7 +119,7 @@ export default class VehicleAssembly extends ReactFetchComponent {
 					<button>Submit</button>
 				</form>
 				<br />
-				<div>{vehparts}</div>
+				<div className="listdiv">{vehparts}</div>
 				<div>Fetching: {fetching ? "yes" : "no"}</div>
 			</div>
 		);

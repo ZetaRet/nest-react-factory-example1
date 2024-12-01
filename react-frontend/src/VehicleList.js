@@ -24,13 +24,13 @@ export default class VehicleList extends ReactFetchComponent {
 		console.log("Render Vehicle List");
 		const listdata = this.state.data;
 		const listItems = listdata.map((d) => (
-			<div ref={d.id}>
+			<div key={d.id} className="listitem">
 				<span>{d.id}</span>, <span>{d.name}</span>, <span>{d.model}</span>, <span>{d.engine}</span>
 			</div>
 		));
 		return (
 			<div>
-				<div>{listItems}</div>
+				<div className="listdiv">{listItems}</div>
 				<br />
 				<div>Fetching: {this.state.fetching ? "yes" : "no"}</div>
 			</div>

@@ -2,6 +2,8 @@
 
 Read the `setup.md` and choose the steps missing on your computer to finalize the install.  
 
+> Type in terminal `npm run start` from the main folder and open `http://localhost:4400/`. Nest and React are compiled.  
+
 ## Use
 
 __Technology__ Set:  

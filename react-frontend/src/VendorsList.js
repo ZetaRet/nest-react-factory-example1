@@ -24,13 +24,13 @@ export default class VendorsList extends ReactFetchComponent {
 		console.log("Render Vendors List");
 		const listdata = this.state.data;
 		const listItems = listdata.map((d) => (
-			<div ref={d.id}>
+			<div key={d.id} className="listitem">
 				<span>{d.id}</span>, <span>{d.name}</span>
 			</div>
 		));
 		return (
 			<div>
-				<div>{listItems}</div>
+				<div className="listdiv">{listItems}</div>
 				<br />
 				<div>Fetching: {this.state.fetching ? "yes" : "no"}</div>
 			</div>

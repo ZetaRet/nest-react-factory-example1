@@ -18,12 +18,12 @@ Add Part Form - name, type, model
 List Form  
 Add Vendor - name  
 List Vendors  
-Product Form - part selector, count  
-Edit Store - part, price, count  
-List Store  
 Add Vehicle Assembly - name, model, engine  
 List Vehicles  
 Add Parts to Vehicle - vehicle selector, part selector, vendor selector, count (view parts)  
+Product Form - part selector, vendor selector, price, count  
+Edit Store - part, price, count  
+List Store  
 
 ## Industrial Client Center
 

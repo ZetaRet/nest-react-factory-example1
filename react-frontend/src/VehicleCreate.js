@@ -46,7 +46,7 @@ export default class VehicleCreate extends ReactFetchComponent {
 		const engineOptions = engines.map((e) => <option value={e}>{e}</option>);
 		return (
 			<div>
-				<form method="POST" action="/api/vehicles/create" onSubmit={this.onSubmit}>
+				<form className="vc_form" method="POST" action="/api/vehicles/create" onSubmit={this.onSubmit}>
 					<input type="text" name="name" placeholder="Vehicle Name" required={true} minLength={1} />
 					<input type="text" name="model" placeholder="Vehicle Model" required={true} minLength={1} />
 					<select name="engine">{engineOptions}</select>

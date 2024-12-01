@@ -49,6 +49,8 @@ form input {
     border-radius: 3px;
     padding: 5px;
     margin: 3px;
+    border: none;
+    background: #fafafa;
 }
 
 form select {
@@ -71,4 +73,31 @@ form button {
 form button:hover {
     color: #fff;
     background-color: rgb(123, 211, 101);;
+}
+
+.vc_form select[name="engine"] {
+    width: 75px;
+}
+
+.va_form select[name="vehicle_id"] {
+    width: 210px;
+}
+
+.va_form select[name="parts_id"] {
+    width: 300px;
+}
+
+.va_form select[name="vendor_id"] {
+    width: 120px;
+}
+
+.listdiv {
+    margin: 15px;
+}
+
+.listdiv .listitem {
+    background: #f0f0f0;
+    padding: 3px;
+    margin: 2px;
+    border-radius: 3px;
 }
