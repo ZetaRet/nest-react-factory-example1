@@ -31,6 +31,11 @@ __Nest__ npm __package.json__ install:
 - mysql2 3.11.4  
 - zod 3.23.8  
 
+````
+cd nest-backend/
+npm install
+````
+
 __React__ npm __package.json__ install:  
 - react 18.3.1  
 - react-dom 18.3.1  
@@ -41,6 +46,11 @@ __React__ npm __package.json__ install:
 - babel-loader 9.2.1  
 - webpack 5.96.1  
 - webpack-cli 5.1.4  
+
+````
+cd ./../react-frontend/
+npm install
+````
 
 In addition to the above you might decide to use __PostgreSQL__ and pgAdmin instead of mysql:  
 - postgresql server 14.13  

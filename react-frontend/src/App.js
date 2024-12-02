@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes, Link, Outlet } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Link, Outlet, useParams } from "react-router-dom";
 import MobilePartsCreate from "./MobilePartsCreate";
 import MobilePartsList from "./MobilePartsList";
 import VendorsCreate from "./VendorsCreate";
@@ -7,6 +7,9 @@ import VendorsList from "./VendorsList";
 import VehicleCreate from "./VehicleCreate";
 import VehicleList from "./VehicleList";
 import VehicleAssembly from "./VehicleAssembly";
+import StoreCreate from "./StoreCreate";
+import StoreList from "./StoreList";
+import StoreEdit from "./StoreEdit";
 
 const Home = () => {
 	return (
@@ -80,8 +83,24 @@ const Store = () => {
 	return (
 		<div>
 			<h2>Store</h2>
+			<nav>
+				<ul>
+					<li>
+						<Link to="create">Create Store Item</Link>
+					</li>
+					<li>
+						<Link to="list">List Store Items</Link>
+					</li>
+				</ul>
+			</nav>
+			<Outlet />
 		</div>
 	);
+};
+
+const StoreEditWrapper = () => {
+	const { storeid } = useParams();
+	return <StoreEdit storeid={storeid} />;
 };
 
 const Invoices = () => {
@@ -134,7 +153,11 @@ export default function App() {
 						<Route path="list" element={<VehicleList />} />
 						<Route path="assembly" element={<VehicleAssembly />} />
 					</Route>
-					<Route path="/store/" element={<Store />} />
+					<Route path="/store/" element={<Store />}>
+						<Route path="create" element={<StoreCreate />} />
+						<Route path="list" element={<StoreList />} />
+						<Route path="edit/:storeid/" element={<StoreEditWrapper />} />
+					</Route>
 					<Route path="/invoices/" element={<Invoices />} />
 				</Routes>
 			</Router>

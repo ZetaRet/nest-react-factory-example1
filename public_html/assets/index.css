@@ -91,6 +91,22 @@ form button:hover {
     width: 120px;
 }
 
+.sc_form select[name="parts_id"] {
+    width: 300px;
+}
+
+.sc_form select[name="vendor_id"] {
+    width: 120px;
+}
+
+.se_form select[name="parts_id"] {
+    width: 300px;
+}
+
+.se_form select[name="vendor_id"] {
+    width: 120px;
+}
+
 .listdiv {
     margin: 15px;
 }
@@ -100,4 +116,28 @@ form button:hover {
     padding: 3px;
     margin: 2px;
     border-radius: 3px;
+}
+
+.tablediv {
+    margin: 15px;
+}
+
+.tablediv table {
+    border: 1px #333 solid;
+}
+
+.tablediv .tablehead {
+    background: #eee;
+}
+
+.tablediv .tablehead th {
+    padding: 2px;
+}
+
+.tablediv .tableitem td {
+    padding: 2px;
+}
+
+.tablediv .tableitem:nth-child(odd) {
+    background: #fafafa;
 }
