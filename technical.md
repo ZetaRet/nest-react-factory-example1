@@ -38,5 +38,6 @@ __React API Ajax:__
 
 Create Invoice Form - client  
 List Invoices  
+View Invoice  
 Edit Invoice - add part selector, part count, add service selector, service count, assemble vehicle selector (add all vehicle parts)  
-Final Invoice - invoice selector (view invoice)  
+Final Invoice - edit invoice form (navigate to view invoice)  

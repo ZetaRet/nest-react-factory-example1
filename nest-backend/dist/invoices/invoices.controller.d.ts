@@ -34,6 +34,7 @@ export declare class InvoicesController {
     update(id: string, updateInvoiceDto: UpdateInvoiceDto): Promise<any>;
     clear(id: string): Promise<any>;
     total(id: string): Promise<any>;
+    view(id: string): Promise<any>;
     createService(createInvoiceServiceDto: CreateInvoiceServiceDto): Promise<any>;
     findAllServices(): import("knex").Knex.QueryBuilder<{}, ({
         _base: {};

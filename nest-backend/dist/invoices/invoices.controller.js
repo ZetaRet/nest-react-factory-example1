@@ -39,6 +39,9 @@ let InvoicesController = class InvoicesController {
     total(id) {
         return this.invoicesService.total(+id);
     }
+    view(id) {
+        return this.invoicesService.view(+id);
+    }
     createService(createInvoiceServiceDto) {
         return this.invoicesService.createService(createInvoiceServiceDto);
     }
@@ -116,6 +119,13 @@ __decorate([
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)
 ], InvoicesController.prototype, "total", null);
+__decorate([
+    (0, common_1.Get)('view/:id'),
+    __param(0, (0, common_1.Param)('id')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String]),
+    __metadata("design:returntype", void 0)
+], InvoicesController.prototype, "view", null);
 __decorate([
     (0, common_1.Post)('services/add'),
     __param(0, (0, common_1.Body)()),

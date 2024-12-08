@@ -37,6 +37,7 @@ export declare class InvoicesService {
     update(id: number, updateInvoiceDto: UpdateInvoiceDto): Promise<any>;
     clear(id: number): Promise<any>;
     total(id: number): Promise<any>;
+    view(id: number): Promise<any>;
     createService(createInvoiceServiceDto: CreateInvoiceServiceDto): Promise<any>;
     findAllServices(): Knex.QueryBuilder<{}, ({
         _base: {};

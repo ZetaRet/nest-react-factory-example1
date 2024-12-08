@@ -63,14 +63,16 @@ let InvoicesService = class InvoicesService {
             .table('invoice_parts')
             .select([this.knex.raw('sum(price*count) as sum_parts')])
             .where('invoices_id', id);
-        console.log('Sum Parts', sum_parts);
+        if (this.debug)
+            console.log('Sum Parts', sum_parts);
         if (sum_parts.length == 1)
             total += parseFloat(sum_parts[0].sum_parts || 0);
         const sum_array = await this.knex
             .table('invoice_array')
             .select([this.knex.raw('sum(price*count) as sum_array')])
             .where('invoices_id', id);
-        console.log('Sum Array', sum_array);
+        if (this.debug)
+            console.log('Sum Array', sum_array);
         if (sum_array.length == 1)
             total += parseFloat(sum_array[0].sum_array || 0);
         return total;
@@ -122,6 +124,33 @@ let InvoicesService = class InvoicesService {
             return { total: parseFloat(minv.total) };
         var total = await this.getTotal(id);
         return { total };
+    }
+    async view(id) {
+        const viewinv = {};
+        const minv = await this.knex.table('invoices').where('id', id).first();
+        if (this.debug)
+            console.log('\x1b[34m View Invoice:\x1b[0m', minv);
+        if (!minv)
+            return this.returnError('noInvoice');
+        viewinv.invoice = minv;
+        viewinv.parts = await this.knex
+            .table('invoice_parts')
+            .select([
+            'invoice_parts.*',
+            'mobile_parts.name',
+            'mobile_parts.type',
+            'mobile_parts.model',
+            this.knex.raw('vendors.name as vendor_name'),
+        ])
+            .leftJoin('mobile_parts', 'invoice_parts.parts_id', 'mobile_parts.id')
+            .leftJoin('vendors', 'invoice_parts.vendor_id', 'vendors.id')
+            .where('invoices_id', id);
+        viewinv.services = await this.knex
+            .table('invoice_array')
+            .select(['invoice_array.*', 'invoice_services.name'])
+            .leftJoin('invoice_services', 'invoice_array.service_id', 'invoice_services.id')
+            .where('invoices_id', id);
+        return viewinv;
     }
     async createService(createInvoiceServiceDto) {
         const zodsafe = create_invoice_dto_1.CreateInvoiceServiceZod.safeParse(createInvoiceServiceDto);

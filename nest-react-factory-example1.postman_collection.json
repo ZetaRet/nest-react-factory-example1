@@ -578,6 +578,27 @@
 			"response": []
 		},
 		{
+			"name": "Get Invoice View",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/invoices/view/1/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"invoices",
+						"view",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Create Invoice",
 			"request": {
 				"method": "POST",

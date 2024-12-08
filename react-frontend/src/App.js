@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes, Link, Outlet, useParams } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Link, Outlet, useParams, useNavigate } from "react-router-dom";
 import MobilePartsCreate from "./MobilePartsCreate";
 import MobilePartsList from "./MobilePartsList";
 import VendorsCreate from "./VendorsCreate";
@@ -10,6 +10,10 @@ import VehicleAssembly from "./VehicleAssembly";
 import StoreCreate from "./StoreCreate";
 import StoreList from "./StoreList";
 import StoreEdit from "./StoreEdit";
+import InvoiceCreate from "./InvoiceCreate";
+import InvoiceList from "./InvoiceList";
+import InvoiceEdit from "./InvoiceEdit";
+import InvoiceView from "./InvoiceView";
 
 const Home = () => {
 	return (
@@ -107,8 +111,30 @@ const Invoices = () => {
 	return (
 		<div>
 			<h2>Invoices</h2>
+			<nav>
+				<ul>
+					<li>
+						<Link to="create">Create Invoice</Link>
+					</li>
+					<li>
+						<Link to="list">List Invoices</Link>
+					</li>
+				</ul>
+			</nav>
+			<Outlet />
 		</div>
 	);
+};
+
+const InvoiceEditWrapper = () => {
+	const { invoiceid } = useParams();
+	const navigate = useNavigate();
+	return <InvoiceEdit invoiceid={invoiceid} navigate={navigate} />;
+};
+
+const InvoiceViewWrapper = () => {
+	const { invoiceid } = useParams();
+	return <InvoiceView invoiceid={invoiceid} />;
 };
 
 export default function App() {
@@ -158,7 +184,12 @@ export default function App() {
 						<Route path="list" element={<StoreList />} />
 						<Route path="edit/:storeid/" element={<StoreEditWrapper />} />
 					</Route>
-					<Route path="/invoices/" element={<Invoices />} />
+					<Route path="/invoices/" element={<Invoices />}>
+						<Route path="create" element={<InvoiceCreate />} />
+						<Route path="list" element={<InvoiceList />} />
+						<Route path="edit/:invoiceid/" element={<InvoiceEditWrapper />} />
+						<Route path="view/:invoiceid/" element={<InvoiceViewWrapper />} />
+					</Route>
 				</Routes>
 			</Router>
 		</div>

@@ -63,8 +63,15 @@ let StoreService = class StoreService {
     findAllDetails() {
         return this.knex
             .table('store')
-            .select(['store.*', 'mobile_parts.name', 'mobile_parts.type', 'mobile_parts.model'])
-            .leftJoin('mobile_parts', 'store.parts_id', 'mobile_parts.id');
+            .select([
+            'store.*',
+            'mobile_parts.name',
+            'mobile_parts.type',
+            'mobile_parts.model',
+            this.knex.raw('vendors.name as vendor_name'),
+        ])
+            .leftJoin('mobile_parts', 'store.parts_id', 'mobile_parts.id')
+            .leftJoin('vendors', 'store.vendor_id', 'vendors.id');
     }
     async findOne(id) {
         const msto = await this.knex.table('store').where('id', id).first();

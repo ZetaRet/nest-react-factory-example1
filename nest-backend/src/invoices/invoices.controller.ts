@@ -43,6 +43,11 @@ export class InvoicesController {
     return this.invoicesService.total(+id);
   }
 
+  @Get('view/:id')
+  view(@Param('id') id: string) {
+    return this.invoicesService.view(+id);
+  }
+
   @Post('services/add')
   createService(@Body() createInvoiceServiceDto: CreateInvoiceServiceDto) {
     return this.invoicesService.createService(createInvoiceServiceDto);

@@ -36,7 +36,7 @@ export declare class StoreService {
         _base: any;
         _hasSelection: true;
         _keys: string;
-        _aliases: string[];
+        _aliases: (string | Knex.Raw<any>)[];
         _single: boolean;
         _intersectProps: {};
         _unionProps: unknown;
@@ -44,7 +44,7 @@ export declare class StoreService {
         _base: any;
         _hasSelection: true;
         _keys: never;
-        _aliases: string[];
+        _aliases: (string | Knex.Raw<any>)[];
         _single: false;
         _intersectProps: {};
         _unionProps: never;

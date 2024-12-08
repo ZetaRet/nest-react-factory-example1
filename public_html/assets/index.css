@@ -107,6 +107,18 @@ form button:hover {
     width: 120px;
 }
 
+.aip_form select[name="store_id"] {
+    width: 300px;
+}
+
+.ais_form select[name="service_id"] {
+    width: 200px;
+}
+
+.aiv_form select[name="vehicle_id"] {
+    width: 200px;
+}
+
 .listdiv {
     margin: 15px;
 }
@@ -120,10 +132,13 @@ form button:hover {
 
 .tablediv {
     margin: 15px;
+    display: flex;
+    justify-content: center;
 }
 
 .tablediv table {
     border: 1px #333 solid;
+    border-spacing: 1px 3px;
 }
 
 .tablediv .tablehead {
@@ -138,6 +153,42 @@ form button:hover {
     padding: 2px;
 }
 
+.tablediv .tableitem:hover {
+    background: #b8f1f1 !important;
+}
+
 .tablediv .tableitem:nth-child(odd) {
     background: #fafafa;
+}
+
+.tablediv table .row-remove {
+    cursor: pointer;
+    font-weight: bold;
+    color: #4b0303;
+}
+
+.tablediv table .row-remove:hover {
+    color: #180202;
+}
+
+.invoice_view_div {
+    margin: 3px;
+    display: flex;
+    justify-content: center;
+}
+
+.invoice_view_div label {
+    padding: 3px;
+    background: #fafafa;
+    border-radius: 2px;
+}
+
+.invoice_view_div span {
+    padding: 3px;
+    background: #f0f0f0;
+    border-radius: 2px;
+}
+
+.invoice_view_div table {
+    border-spacing: 0 8px;
 }

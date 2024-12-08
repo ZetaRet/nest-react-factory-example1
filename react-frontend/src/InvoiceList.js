@@ -2,41 +2,44 @@ import React from "react";
 import ReactFetchComponent from "./ReactFetchComponent";
 import { Link } from "react-router-dom";
 
-export default class StoreList extends ReactFetchComponent {
+export default class InvoiceList extends ReactFetchComponent {
 	constructor(props) {
 		super(props);
 		this.state = { fetching: false, data: [] };
 	}
 
 	componentWillUnmount() {
-		console.log("Unmount Store List");
+		console.log("Unmount Invoice List");
 	}
 
 	componentDidMount() {
 		const o = this;
-		console.log("Mount Store List");
-		this.fetchAPI("/api/store/details", "GET", null, (d) => {
+		console.log("Mount Invoice List");
+		this.fetchAPI("/api/invoices/", "GET", null, (d) => {
 			o.setState({ fetching: false, data: d });
 		});
 		o.setState({ fetching: true });
 	}
 
+	formatDate(value) {
+		let date = new Date(value);
+		return date.toDateString() + " " + date.toLocaleTimeString();
+	}
+
 	render() {
-		console.log("Render Store List");
+		console.log("Render Invoice List");
 		const listdata = this.state.data;
 		const listItems = listdata.map((d) => (
 			<tr key={d.id} className="tableitem">
 				<td>{d.id}</td>
-				<td>{d.vendor_id}</td>
-				<td>{d.vendor_name}</td>
-				<td>{d.parts_id}</td>
+				<td>{d.client}</td>
+				<td>{this.formatDate(d.created_at)}</td>
+				<td>{this.formatDate(d.updated_at)}</td>
+				<td>{d.final ? d.total : "-"}</td>
+				<td>{d.final ? "Final" : <Link to={"/invoices/edit/" + d.id}>Edit</Link>}</td>
 				<td>
-					<Link to={"/store/edit/" + d.id}>{d.name}</Link>
+					<Link to={"/invoices/view/" + d.id}>View</Link>
 				</td>
-				<td>{d.type}</td>
-				<td>{d.model}</td>
-				<td>{d.count}</td>
-				<td>{d.price}</td>
 			</tr>
 		));
 		return (
@@ -44,15 +47,13 @@ export default class StoreList extends ReactFetchComponent {
 				<div className="tablediv">
 					<table>
 						<tr className="tablehead">
-							<th>Store Id</th>
-							<th>Vendor Id</th>
-							<th>Vendor Name</th>
-							<th>Part Id</th>
-							<th>Part Name</th>
-							<th>Part Type</th>
-							<th>Part Model</th>
-							<th>Count</th>
-							<th>Price</th>
+							<th>Id</th>
+							<th>Client</th>
+							<th>Created</th>
+							<th>Updated</th>
+							<th>Total</th>
+							<th>Status</th>
+							<th></th>
 						</tr>
 						{listItems}
 					</table>
