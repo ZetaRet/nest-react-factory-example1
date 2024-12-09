@@ -1912,7 +1912,7 @@ console.log("Mount Invoice Edit"),this.fetchAPI("/api/invoices/"+n+"/","GET",nul
 n.final||(r.f1=!0,r.f2=!0),t.clientinp.value=n.client,t.setState(r),n.final||(t.fetchAPI("/api/invoices/parts/"+n.id,"GET",null,(function(n){var r=e.state.data
 r.parts=n,t.setState({f1:!1,data:r})})),t.fetchAPI("/api/invoices/array/"+n.id,"GET",null,(function(n){var r=e.state.data
 r.services=n,t.setState({f2:!1,data:r})})))})),this.fetchAPI("/api/store/details","GET",null,(function(e){e.ids={},e.forEach((function(t){return e.ids[t.id]=t})),t.setState({f3p:!1,parts:e})})),this.fetchAPI("/api/invoices/services/all","GET",null,(function(e){e.ids={},e.forEach((function(t){return e.ids[t.id]=t})),t.setState({f4s:!1,services:e})})),this.fetchAPI("/api/vehicles/","GET",null,(function(e){t.setState({f5v:!1,vehicles:e})})),t.setState({fetching:!0,f3p:!0,f4s:!0,f5v:!0})}},{key:"isFetching",value:function(){var e=this.state
-return e.fetching&&e.f1&&e.f2&&e.f3p&&e.f4s&&e.f5v}},{key:"onSubmit",value:function(e){var t=this
+return e.fetching||e.f1||e.f2||e.f3p||e.f4s||e.f5v}},{key:"onSubmit",value:function(e){var t=this
 if(e.preventDefault(),this.isFetching())return!1
 var n=e.target,r={final:!0}
 return console.log(r),this.fetchAPI(n.action,n.method,r,(function(e){t.setState({fetching:!1})

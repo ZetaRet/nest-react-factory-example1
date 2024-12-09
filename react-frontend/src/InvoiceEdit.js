@@ -72,7 +72,7 @@ export default class InvoiceEdit extends ReactFetchComponent {
 
 	isFetching() {
 		let s = this.state;
-		return s.fetching && s.f1 && s.f2 && s.f3p && s.f4s && s.f5v;
+		return s.fetching || s.f1 || s.f2 || s.f3p || s.f4s || s.f5v;
 	}
 
 	onSubmit(e) {
